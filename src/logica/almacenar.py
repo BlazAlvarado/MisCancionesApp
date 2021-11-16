@@ -11,7 +11,7 @@ if __name__ == '__main__':
     session = Session()
 
     #crear intérpretes
-    interprete1 = Interprete(nombre = "Samuel Torres", texto_curiosidades = "Es colombiano y vive en NY")
+    interprete1 = Interprete(nombre = "BalbinFernando", texto_curiosidades = "Es colombiano y vive en NY")
     interprete2 = Interprete(nombre = "Aldo Gavilan", texto_curiosidades = "Cantó a Cuba")
     interprete3 = Interprete(nombre = "Buena Vista Social club")
     interprete4 = Interprete(nombre = "Arturo Sandoval", texto_curiosidades = "No sabía quien era")

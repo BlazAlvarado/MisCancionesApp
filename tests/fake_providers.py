@@ -1,7 +1,10 @@
 import random
+import unittest
 from datetime import datetime
 from datetime import timedelta
 from src.modelo.album import Medio
+from src.modelo.cancion import Cancion
+from src.modelo.interprete import Interprete
 from faker import Faker
 from faker.providers import BaseProvider
 
@@ -30,3 +33,35 @@ class AlbumFechaProvider(BaseProvider):
         new_date = datetime(2019, 2, 28, 00, 00, 00, 00000)
         fecha = [new_date, new_date + timedelta(days=-1), new_date + timedelta(days=-2)]
         return random.choice(fecha)
+
+class CancionTituloProvider(BaseProvider):
+    def cancionTitulo(self):
+        cancionTitulo = ['Happier', 'Duele Amor', 'Cant Hold Us', 'La chata']
+        return random.choice(cancionTitulo)
+
+class CancionMinutosProvider(BaseProvider):
+    def cancionMinutos(self):
+        min = [1, 2, 3, 4]
+        return random.choice(min)
+
+class CancionSegundosProvider(BaseProvider):
+    def cancionSegundos(self):
+        seg = [range(1,60)]
+        return random.choice(seg)
+
+class CancionCompositorProvider(BaseProvider):
+    def cancionCompositor(self):
+        self.compo = [ 'mashmello','FernandoBalbin','Maklemore','Elchato' ]
+        return random.choice(self.compo)
+
+
+
+class InterpreteNombreProvider(BaseProvider):
+    def interpreteNombre(self):
+        interpreteNombre = ['BadBony', 'Baarrera', 'JustinBabier', 'El chatin']
+        return random.choice(interpreteNombre)
+
+class InterpreteTextoCuriosidadesProvider(BaseProvider):
+    def interpreteTexto(self):
+        interpreteTextoCuriosidades = ['Canta Bien en la nota menor', 'Canta?', 'Canta como los dioses', 'Me agacho para escucharlo']
+        return random.choice(interpreteTextoCuriosidades)
