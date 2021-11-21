@@ -63,5 +63,5 @@ class InterpreteNombreProvider(BaseProvider):
 
 class InterpreteTextoCuriosidadesProvider(BaseProvider):
     def interpreteTexto(self):
-        interpreteTextoCuriosidades = ['Canta Bien en la nota menor', 'Canta?', 'Canta como los dioses', 'Me agacho para escucharlo']
-        return random.choice(interpreteTextoCuriosidades)
+        interpreteTexto = ['Canta Bien en la nota menor', 'Canta?', 'Canta como los dioses', 'Me agacho para escucharlo']
+        return random.choice(interpreteTexto)

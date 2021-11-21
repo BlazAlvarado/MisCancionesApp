@@ -52,7 +52,7 @@ class CancionTestCaseFake(unittest.TestCase):
             En este setUp no se cierra la sesión para usar
             los albumes en las pruebas
         '''
-        self.session.commit ( )
+        self.session.commit( )
         #self.session.close()
 
     def tearDown ( self ) :
