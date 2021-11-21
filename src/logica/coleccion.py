@@ -1,6 +1,7 @@
 from src.modelo.declarative_base import engine, Base, session
 from src.modelo.album import Album
 from src.modelo.cancion import Cancion
+from src.modelo.interprete import Interprete
 
 class Coleccion():
     def _init_(self):
@@ -52,4 +53,16 @@ class Coleccion():
             session.commit ( )
             return True
         else :
+            return False
+
+
+
+    def agregar_interprete(self, nombre, texto_curiosidades):
+        busqueda = session.query(Interprete).filter(Interprete.nombre == nombre).all()
+        if len(busqueda) == 0:
+            interprete = Interprete(nombre=nombre, texto_curiosidades=texto_curiosidades)
+            session.add(interprete)
+            session.commit()
+            return True
+        else:
             return False
